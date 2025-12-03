@@ -11,8 +11,7 @@ IMAGE_FEATURES = " \
 IMAGE_INSTALL = " \
   busybox \
   dnf \
+  systemd \
 "
-
-IMAGE_INIT_MANAGER  = "systemd"
 
 inherit core-image
