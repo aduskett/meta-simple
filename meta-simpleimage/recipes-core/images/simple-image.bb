@@ -4,14 +4,15 @@ IMAGE_FEATURES = " \
   allow-empty-password \
   allow-root-login \
   empty-root-password \
-  package-management \
   ssh-server-openssh \
 "
 
 IMAGE_INSTALL = " \
   busybox \
-  dnf \
-  systemd \
+  e2fsprogs-resize2fs \
+  packagegroup-core-boot \
+  parted \
+  setup-directories \
 "
 
 inherit core-image

@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+set -e
+
+DATA_DIR="/data"
+LOG_DIR="/logs"
+
+setup_directory_permissions() {
+  if [ -e "${DATA_DIR}" ]; then
+    chmod 775 "${DATA_DIR}"
+  fi
+
+  if [ -e "${LOG_DIR}" ]; then
+    chmod 775 "${LOG_DIR}"
+  fi
+}
+
+
+main() {
+  setup_directory_permissions
+}
+
+main "${@}"
