@@ -1,0 +1,4 @@
+bootloader --ptable gpt
+part /boot --source bootimg-efi --sourceparams="loader=grub-efi,initrd=simple-initramfs-systemd-dracut-${MACHINE}.cpio" --ondisk sda --label efi --active --align 1024 --size 512M
+part / --source rootfs --fstype=ext4 --ondisk sda --label rootfs --align 1024
+part /data --source extra_partition --fstype=ext4 --ondisk sda --label data --align 1024 --size 128M

@@ -8,11 +8,9 @@ IMAGE_FEATURES = " \
 "
 
 IMAGE_INSTALL = " \
-  busybox \
-  e2fsprogs-resize2fs \
   packagegroup-core-boot \
-  parted \
-  setup-directories \
+  util-linux-agetty \
+  kmscon \
 "
 
 inherit core-image
